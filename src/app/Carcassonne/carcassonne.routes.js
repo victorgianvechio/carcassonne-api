@@ -7,6 +7,7 @@ const routes = new Router();
 
 // routes.get('/ranking', authMiddleware, SolarFlareTicketController.ranking);
 routes.post('/match', CarcassonneController.newMatch);
+routes.post('/loadMatch', CarcassonneController.loadMatch);
 routes.post('/endRound', CarcassonneController.endRound);
 routes.post('/interface', CarcassonneController.getInterface);
 routes.post('/city', CarcassonneController.city);
@@ -16,6 +17,7 @@ routes.post('/garden', CarcassonneController.garden);
 routes.post('/farm', CarcassonneController.farm);
 routes.post('/mamada', CarcassonneController.mamada);
 routes.post('/barn', CarcassonneController.barn);
+routes.post('/castle', CarcassonneController.castle);
 routes.post('/moveFairy', CarcassonneController.moveFairy);
 routes.post('/countConstructor', CarcassonneController.countConstructor);
 routes.post('/addCity', CarcassonneController.addCity);

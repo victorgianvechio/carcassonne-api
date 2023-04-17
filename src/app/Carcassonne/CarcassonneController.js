@@ -3,13 +3,13 @@ import RoadService from './RoadService';
 import CityService from './CityService';
 import MonasteryService from './MonasteryService';
 import FarmService from './FarmService';
+import CastleService from './CastleService';
 import GoldService from './GoldService';
 import GoodsService from './GoodsService';
 
 class CarcassonneController {
   async getInterface(req, res) {
     const INTERFACE_FILE = await MatchService.getInterface();
-    console.log(INTERFACE_FILE);
     res.status(200).json(INTERFACE_FILE);
   }
 
@@ -30,6 +30,12 @@ class CarcassonneController {
     }
 
     return res.status(400).json({ success: false, message: result.message });
+  }
+
+  async loadMatch(req, res) {
+    const { date } = req.body;
+    const result = await MatchService.loadMatch(date);
+    return res.status(200).json(result);
   }
 
   async endRound(req, res) {
@@ -70,6 +76,11 @@ class CarcassonneController {
   async garden(req, res) {
     await MonasteryService.addGarden(req.body);
     return res.status(200).json({ success: true, message: 'added garden' });
+  }
+
+  async castle(req, res) {
+    await CastleService.addCastle(req.body);
+    return res.status(200).json({ success: true, message: 'added castle' });
   }
 
   async moveFairy(req, res) {
