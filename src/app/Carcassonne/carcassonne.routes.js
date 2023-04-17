@@ -1,12 +1,13 @@
 import { Router } from 'express';
 
 import CarcassonneController from './CarcassonneController';
-import authMiddleware from '../../middlewares/auth';
+// import authMiddleware from '../../middlewares/auth';
 
 const routes = new Router();
 
 // routes.get('/ranking', authMiddleware, SolarFlareTicketController.ranking);
 routes.post('/match', CarcassonneController.newMatch);
+routes.post('/endRound', CarcassonneController.endRound);
 routes.post('/interface', CarcassonneController.getInterface);
 routes.post('/city', CarcassonneController.city);
 routes.post('/road', CarcassonneController.road);

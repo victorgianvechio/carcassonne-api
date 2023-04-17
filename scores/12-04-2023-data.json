@@ -1,14 +1,16 @@
 {
     "DATA": [
         {
-            "PLAYER": "VICTOR",
-            "FEATURE": "ROAD",
+            "TURN": 1,
+            "PLAYER": "RENAN",
+            "FEATURE": "CITY",
             "MEEPLE": "NORMAL",
             "FAIRY": false,
             "WITCH": false,
             "MAGE": false,
-            "TILES": 10,
-            "INN": false,
+            "TILES": 5,
+            "SHIELDS": 0,
+            "CATHEDRAL": false,
             "WATCHTOWER_FEATURE": "",
             "WATCHTOWER_QUANTITY": 0,
             "FEATURE_POINTS": 10,
@@ -16,20 +18,75 @@
             "TOTAL_POINTS": 10
         },
         {
+            "TURN": 2,
             "PLAYER": "VICTOR",
             "FEATURE": "CITY",
             "MEEPLE": "NORMAL",
-            "FAIRY": true,
+            "FAIRY": false,
             "WITCH": false,
             "MAGE": false,
-            "TILES": 3,
-            "SHIELDS": 2,
+            "TILES": 5,
+            "SHIELDS": 0,
             "CATHEDRAL": false,
             "WATCHTOWER_FEATURE": "",
             "WATCHTOWER_QUANTITY": 0,
             "FEATURE_POINTS": 10,
             "WATCHTOWER_POINTS": 0,
-            "TOTAL_POINTS": 13
+            "TOTAL_POINTS": 10
+        },
+        {
+            "TURN": 2,
+            "PLAYER": "VICTOR",
+            "FEATURE": "CITY",
+            "MEEPLE": "GHOST",
+            "FAIRY": false,
+            "WITCH": false,
+            "MAGE": false,
+            "TILES": 5,
+            "SHIELDS": 0,
+            "CATHEDRAL": false,
+            "WATCHTOWER_FEATURE": "",
+            "WATCHTOWER_QUANTITY": 0,
+            "FEATURE_POINTS": 10,
+            "WATCHTOWER_POINTS": 0,
+            "TOTAL_POINTS": 10
+        },
+        {
+            "TURN": 3,
+            "PLAYER": "SHINDI",
+            "FEATURE": "CITY",
+            "MEEPLE": "NORMAL",
+            "FAIRY": false,
+            "WITCH": false,
+            "MAGE": false,
+            "TILES": 5,
+            "SHIELDS": 0,
+            "CATHEDRAL": false,
+            "WATCHTOWER_FEATURE": "",
+            "WATCHTOWER_QUANTITY": 0,
+            "FEATURE_POINTS": 10,
+            "WATCHTOWER_POINTS": 0,
+            "TOTAL_POINTS": 10
+        },
+        {
+            "TURN": 4,
+            "PLAYER": "RENAN",
+            "FEATURE": "MONASTERY",
+            "MEEPLE": "PRIEST",
+            "FAIRY": true,
+            "TILES": 9,
+            "FEATURE_POINTS": 9,
+            "TOTAL_POINTS": 12
+        },
+        {
+            "TURN": 5,
+            "PLAYER": "RENAN",
+            "FEATURE": "MONASTERY",
+            "MEEPLE": "PRIEST",
+            "FAIRY": false,
+            "TILES": 5,
+            "FEATURE_POINTS": 5,
+            "TOTAL_POINTS": 5
         }
     ]
 }

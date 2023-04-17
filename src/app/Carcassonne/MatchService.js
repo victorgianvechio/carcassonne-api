@@ -30,7 +30,7 @@ class MatchService {
     INTERFACE.DATE = formattedDate;
     INTERFACE.MATCH = match_number;
     INTERFACE.ROUND = 1;
-    INTERFACE.TURN = 1;
+    INTERFACE.TURN = 0;
 
     try {
       setInterfaceFile(INTERFACE);
@@ -45,8 +45,6 @@ class MatchService {
     const DATA_FILE = getDataFile();
     const INTERFACE_FILE = getInterfaceFile();
 
-    POINTS.TURN = INTERFACE_FILE.TURN;
-
     await updatePoints(POINTS, INTERFACE_FILE);
 
     if (POINTS.FEATURE === FEATURES.CITY)
@@ -55,8 +53,45 @@ class MatchService {
     if (POINTS.FEATURE === FEATURES.ROAD)
       await updateKingRoad(POINTS, INTERFACE_FILE);
 
+    // MEEPLES (NORMAL, PRIEST)
     if (POINTS.MEEPLE !== MEEPLES.GHOST) {
       INTERFACE_FILE.TURN += 1;
+      POINTS.TURN = INTERFACE_FILE.TURN;
+
+      if (POINTS.MEEPLE === MEEPLES.PRIEST) {
+        if (POINTS.PLAYER === PLAYERS.VICTOR) {
+          INTERFACE_FILE.VICTOR_PRIEST += 1;
+          INTERFACE_FILE.VICTOR_POINTS_PRIEST += POINTS.TOTAL_POINTS;
+        }
+
+        if (POINTS.PLAYER === PLAYERS.SHINDI) {
+          INTERFACE_FILE.SHINDI_PRIEST += 1;
+          INTERFACE_FILE.SHINDI_POINTS_PRIEST += POINTS.TOTAL_POINTS;
+        }
+
+        if (POINTS.PLAYER === PLAYERS.RENAN) {
+          INTERFACE_FILE.RENAN_PRIEST += 1;
+          INTERFACE_FILE.RENAN_POINTS_PRIEST += POINTS.TOTAL_POINTS;
+        }
+      }
+      // GHOST
+    } else {
+      POINTS.TURN = INTERFACE_FILE.TURN;
+
+      if (POINTS.PLAYER === PLAYERS.VICTOR) {
+        INTERFACE_FILE.VICTOR_GHOST += 1;
+        INTERFACE_FILE.VICTOR_POINTS_GHOST += POINTS.TOTAL_POINTS;
+      }
+
+      if (POINTS.PLAYER === PLAYERS.SHINDI) {
+        INTERFACE_FILE.SHINDI_GHOST += 1;
+        INTERFACE_FILE.SHINDI_POINTS_GHOST += POINTS.TOTAL_POINTS;
+      }
+
+      if (POINTS.PLAYER === PLAYERS.RENAN) {
+        INTERFACE_FILE.RENAN_GHOST += 1;
+        INTERFACE_FILE.RENAN_POINTS_GHOST += POINTS.TOTAL_POINTS;
+      }
     }
 
     DATA_FILE.DATA.push(POINTS);
