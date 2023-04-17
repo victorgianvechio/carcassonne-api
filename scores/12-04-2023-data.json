@@ -1,0 +1,35 @@
+{
+    "DATA": [
+        {
+            "PLAYER": "VICTOR",
+            "FEATURE": "ROAD",
+            "MEEPLE": "NORMAL",
+            "FAIRY": false,
+            "WITCH": false,
+            "MAGE": false,
+            "TILES": 10,
+            "INN": false,
+            "WATCHTOWER_FEATURE": "",
+            "WATCHTOWER_QUANTITY": 0,
+            "FEATURE_POINTS": 10,
+            "WATCHTOWER_POINTS": 0,
+            "TOTAL_POINTS": 10
+        },
+        {
+            "PLAYER": "VICTOR",
+            "FEATURE": "CITY",
+            "MEEPLE": "NORMAL",
+            "FAIRY": true,
+            "WITCH": false,
+            "MAGE": false,
+            "TILES": 3,
+            "SHIELDS": 2,
+            "CATHEDRAL": false,
+            "WATCHTOWER_FEATURE": "",
+            "WATCHTOWER_QUANTITY": 0,
+            "FEATURE_POINTS": 10,
+            "WATCHTOWER_POINTS": 0,
+            "TOTAL_POINTS": 13
+        }
+    ]
+}

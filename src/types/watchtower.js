@@ -1,0 +1,6 @@
+export const WATCHTOWER = {
+  ROAD: 'ROAD',
+  CITY: 'CITY',
+  MONASTERY: 'MONASTERY',
+  MEEPLE: 'MEEPLE',
+};
