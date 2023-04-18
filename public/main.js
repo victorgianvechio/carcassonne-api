@@ -1,3 +1,5 @@
+const API_BASE_URL = 'http://168.138.141.170:6060/api/v1/carcassonne';
+
 (async function () {
   console.log('Executou');
   await getInterface();
@@ -8,7 +10,7 @@
 
 async function getInterface() {
   try {
-    const response = await axios.post('http://localhost:6060/api/v1/carcassonne/interface', {});
+    const response = await axios.post(API_BASE_URL + '/interface', {});
     // const response = await axios.get('http://localhost:6060/api/v1');
 
     // PONTOS
@@ -54,7 +56,7 @@ async function getInterface() {
 
 async function addCity() {
   try {
-    await axios.post('http://localhost:6060/api/v1/carcassonne/addCity', {});
+    await axios.post(API_BASE_URL + '/addCity', {});
     await getInterface();   
   } catch (error) {
     console.error(error);
@@ -63,7 +65,7 @@ async function addCity() {
 
 async function removeCity() {
   try {
-    await axios.post('http://localhost:6060/api/v1/carcassonne/removeCity', {});
+    await axios.post(API_BASE_URL + '/removeCity', {});
     await getInterface();   
   } catch (error) {
     console.error(error);
@@ -72,7 +74,7 @@ async function removeCity() {
 
 async function addRoad() {
   try {
-    await axios.post('http://168.138.141.170:6060/api/v1/carcassonne/addRoad', {});
+    await axios.post(API_BASE_URL + '/addRoad', {});
     await getInterface();   
   } catch (error) {
     console.error(error);
@@ -81,7 +83,7 @@ async function addRoad() {
 
 async function removeRoad() {
   try {
-    await axios.post('http://localhost:6060/api/v1/carcassonne/removeRoad', {});
+    await axios.post(API_BASE_URL + '/removeRoad', {});
     await getInterface();   
   } catch (error) {
     console.error(error);
@@ -90,7 +92,7 @@ async function removeRoad() {
 
 async function addFairy(player) {
   try {
-    await axios.post('http://localhost:6060/api/v1/carcassonne/addFairyPoint', {player});
+    await axios.post(API_BASE_URL + '/addFairyPoint', {player});
     await getInterface();   
   } catch (error) {
     console.error(error);
@@ -99,7 +101,7 @@ async function addFairy(player) {
 
 async function removeFairy(player) {
   try {
-    await axios.post('http://localhost:6060/api/v1/carcassonne/removeFairyPoint', {player});
+    await axios.post(API_BASE_URL + '/removeFairyPoint', {player});
     await getInterface();   
   } catch (error) {
     console.error(error);

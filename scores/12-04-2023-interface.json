@@ -3,7 +3,7 @@
     "ROUND": 1,
     "TURN": 4,
     "VICTOR_POINTS": 2,
-    "SHINDI_POINTS": 36,
+    "SHINDI_POINTS": 31,
     "RENAN_POINTS": 33,
     "FAIRY_OWNER": "",
     "VICTOR_FAIRY_ROUND": 2,
@@ -68,5 +68,5 @@
     "SHINDI_CONSTRUCTOR": 0,
     "RENAN_CONSTRUCTOR": 0,
     "CITIES": 13,
-    "ROADS": 10
+    "ROADS": 5
 }
