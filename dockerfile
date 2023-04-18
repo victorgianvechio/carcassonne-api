@@ -3,5 +3,5 @@ WORKDIR /app/carcassonne-api
 COPY package.json ./
 RUN yarn
 COPY . .
-EXPOSE 6666
+EXPOSE 6060
 CMD yarn prod

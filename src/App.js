@@ -1,5 +1,6 @@
 import express from 'express';
 
+import { PUBLIC_PATH } from './utils/paths';
 import allowCors from './middlewares/cors';
 
 import carcassonneRoutes from './app/Carcassonne/carcassonne.routes';
@@ -20,8 +21,12 @@ class App {
   }
 
   routes() {
+    this.server.get('/home', (req, res) => {
+      res.sendFile(path.resolve(PUBLIC_PATH, 'index.html'));
+    });
+
     this.server.get('/', (req, res) => {
-      res.redirect('/api/v1');
+      res.redirect('/home');
     });
 
     this.server.get('/api/v1', (req, res) => {
