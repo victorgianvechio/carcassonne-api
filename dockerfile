@@ -4,5 +4,5 @@ COPY package.json ./
 RUN yarn
 COPY . .
 RUN yarn env
-EXPOSE 6060
+EXPOSE 6666
 CMD yarn prod

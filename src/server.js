@@ -2,7 +2,7 @@ import './config/dotenv';
 import App from './App';
 import { createScoresDir } from './utils/paths';
 
-const port = process.env.APP_PORT || 6060;
+const port = process.env.APP_PORT || 6666;
 
 createScoresDir();
 

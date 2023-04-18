@@ -23,7 +23,7 @@
     "eslint:fix": "yarn eslint --fix src --ext .js",
     "test": "jest -i",
     "docker:build-img": "sudo docker build . -t carcassonne-api",
-    "docker:run-img": "sudo docker run -d -p 8080:8080 --name carcassonne-api --restart unless-stopped carcassonne-api",
+    "docker:run-img": "sudo docker run -d -p 6666:6666 --name carcassonne-api --restart unless-stopped carcassonne-api",
     "docker:rm": "sudo docker stop carcassonne-api && sudo docker rm carcassonne-api && sudo docker rmi carcassonne-api",
     "docker:explore": "sudo docker exec -it carcassonne-api bash"
   },
