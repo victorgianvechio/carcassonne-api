@@ -76,7 +76,7 @@ class FarmService {
 
     POINTS.TOTAL_POINTS += POINTS.FEATURE_POINTS;
 
-    InterfaceService.endTurn(POINTS);
+    MatchService.endTurn(POINTS);
   }
 }
 

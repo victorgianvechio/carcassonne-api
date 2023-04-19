@@ -54,6 +54,15 @@
             "TILES": 5,
             "FEATURE_POINTS": 5,
             "TOTAL_POINTS": 5
+        },
+        {
+            "TURN": 5,
+            "PLAYER": "RENAN",
+            "FEATURE": "BARN",
+            "COMPLETED_CITIES": 26,
+            "CASTLES": 2,
+            "FEATURE_POINTS": 114,
+            "TOTAL_POINTS": 114
         }
     ]
 }
