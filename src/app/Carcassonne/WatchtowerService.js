@@ -17,7 +17,10 @@ class WatchtowerService {
       return this.WATCHTOWER_POINTS;
     }
 
-    if (WATCHTOWER_FEATURE === WATCHTOWER.MEEPLE) {
+    if (
+      WATCHTOWER_FEATURE === WATCHTOWER.MEEPLE ||
+      WATCHTOWER_FEATURE === WATCHTOWER.SHIELD
+    ) {
       this.WATCHTOWER_POINTS = QUANTITY * 2;
       return this.WATCHTOWER_POINTS;
     }

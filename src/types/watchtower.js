@@ -3,4 +3,5 @@ export const WATCHTOWER = {
   CITY: 'CITY',
   MONASTERY: 'MONASTERY',
   MEEPLE: 'MEEPLE',
+  SHIELD: 'SHIELD',
 };
