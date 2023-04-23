@@ -90,11 +90,19 @@ class CarcassonneController {
       .json({ success: true, message: `fairy moved to ${req.body.player}` });
   }
 
-  async countConstructor(req, res) {
-    await MatchService.countConstructor(req.body.player);
+  async addConstructor(req, res) {
+    await MatchService.addConstructor(req.body.player);
     return res.status(200).json({
       success: true,
       message: `added +1 constructor to ${req.body.player}`,
+    });
+  }
+
+  async removeConstructor(req, res) {
+    await MatchService.removeConstructor(req.body.player);
+    return res.status(200).json({
+      success: true,
+      message: `removed -1 constructor to ${req.body.player}`,
     });
   }
 
