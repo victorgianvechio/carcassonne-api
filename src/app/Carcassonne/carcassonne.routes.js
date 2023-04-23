@@ -9,7 +9,7 @@ const routes = new Router();
 routes.post('/match', CarcassonneController.newMatch);
 routes.post('/loadMatch', CarcassonneController.loadMatch);
 routes.post('/endRound', CarcassonneController.endRound);
-routes.post('/interface', CarcassonneController.getInterface);
+routes.get('/interface', CarcassonneController.getInterface);
 routes.post('/city', CarcassonneController.city);
 routes.post('/road', CarcassonneController.road);
 routes.post('/monastery', CarcassonneController.monastery);
