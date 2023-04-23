@@ -17,6 +17,11 @@ class MatchService {
     return INTERFACE_FILE;
   }
 
+  async getData() {
+    const DATA_FILE = getDataFile();
+    return DATA_FILE;
+  }
+
   async newMatch(date, match_number) {
     setMatchDate(date);
 

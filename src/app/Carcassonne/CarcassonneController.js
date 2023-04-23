@@ -13,6 +13,11 @@ class CarcassonneController {
     res.status(200).json(INTERFACE_FILE);
   }
 
+   async getData(req, res) {
+    const DATA_FILE = await MatchService.getData();
+    res.status(200).json(DATA_FILE);
+  }
+
   async newMatch(req, res) {
     const { date, match_number } = req.body;
 

@@ -10,6 +10,7 @@ routes.post('/match', CarcassonneController.newMatch);
 routes.post('/loadMatch', CarcassonneController.loadMatch);
 routes.post('/endRound', CarcassonneController.endRound);
 routes.get('/interface', CarcassonneController.getInterface);
+routes.get('/data', CarcassonneController.getData);
 routes.post('/city', CarcassonneController.city);
 routes.post('/road', CarcassonneController.road);
 routes.post('/monastery', CarcassonneController.monastery);
