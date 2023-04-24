@@ -73,6 +73,11 @@ class CarcassonneController {
     return res.status(200).json({ success: true, message: 'added barn' });
   }
 
+  async buyOrSellPoints(req, res) {
+    await MatchService.buyOrSellPoints(req.body);
+    return res.status(200).json({ success: true, message: 'meeple' });
+  }
+
   async monastery(req, res) {
     await MonasteryService.addMonastery(req.body);
     return res.status(200).json({ success: true, message: 'added monatery' });

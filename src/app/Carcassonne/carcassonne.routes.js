@@ -19,6 +19,7 @@ routes.post('/farm', CarcassonneController.farm);
 routes.post('/mamada', CarcassonneController.mamada);
 routes.post('/barn', CarcassonneController.barn);
 routes.post('/castle', CarcassonneController.castle);
+routes.post('/meeple', CarcassonneController.buyOrSellPoints);
 routes.post('/moveFairy', CarcassonneController.moveFairy);
 routes.post('/addConstructor', CarcassonneController.addConstructor);
 routes.post('/removeConstructor', CarcassonneController.removeConstructor);
