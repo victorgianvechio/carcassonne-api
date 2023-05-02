@@ -13,7 +13,7 @@ class CarcassonneController {
     res.status(200).json(INTERFACE_FILE);
   }
 
-   async getData(req, res) {
+  async getData(req, res) {
     const DATA_FILE = await MatchService.getData();
     res.status(200).json(DATA_FILE);
   }
@@ -91,6 +91,22 @@ class CarcassonneController {
   async castle(req, res) {
     await CastleService.addCastle(req.body);
     return res.status(200).json({ success: true, message: 'added castle' });
+  }
+
+  async setKingCity(req, res) {
+    const player = req.body.player;
+    await MatchService.setKingCity(player);
+    return res
+      .status(200)
+      .json({ success: true, message: `King city moved to ${player}` });
+  }
+
+  async setKingRoad(req, res) {
+    const player = req.body.player;
+    await MatchService.setKingRoad(player);
+    return res
+      .status(200)
+      .json({ success: true, message: `King road moved to ${player}` });
   }
 
   async moveFairy(req, res) {

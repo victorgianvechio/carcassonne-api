@@ -37,5 +37,7 @@ routes.post('/addWheat', CarcassonneController.addWheat);
 routes.post('/removeWheat', CarcassonneController.removeWheat);
 routes.post('/addSilk', CarcassonneController.addSilk);
 routes.post('/removeSilk', CarcassonneController.removeSilk);
+routes.post('/kingCity', CarcassonneController.setKingCity);
+routes.post('/kingRoad', CarcassonneController.setKingRoad);
 
 export default routes;
